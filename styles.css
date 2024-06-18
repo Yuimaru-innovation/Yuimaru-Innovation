@@ -2,22 +2,16 @@
 body, h1, h2, h3, p, ul, ol, li {
     margin: 0;
     padding: 0;
-  }
-  
+}
 
-
-
-
-
-
-/*フォント　背景*/
+/* フォント 背景 */
 body {
   font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   color: #333;
   font-size: 16px;
   background-color: #FFF;
-  width:100%;
-  height:10vw;
+  width: 100%;
+  height: 10vw;
 }
 
 #wrap {
@@ -28,13 +22,7 @@ body {
   min-height: 100vh;
 }
 
-
-
-
-
-
-
-/*ヘッダー*/
+/* ヘッダー */
 header {
   width: 100%;
   position: relative; /* 相対位置指定 */
@@ -48,7 +36,7 @@ header img {
   height: auto;
 }
 
-.logo{
+.logo {
   position: absolute; /* 絶対位置指定 */
   top: 10px; /* ヘッダー画像の下に配置 */
   left: 1%;
@@ -58,13 +46,7 @@ header img {
   margin-right: auto;
 }
 
-
-
-
-
-
-
-/*ナビ*/
+/* ナビ */
 nav {
   position: absolute; /* 絶対位置指定 */
   top: 40px; /* ヘッダー画像の下に配置 */
@@ -93,7 +75,6 @@ nav a {
   position: relative; /* 相対位置指定 */
 }
 
-
 nav a:hover {
   color: #E5B64F; /* マウスオーバー時の文字色を変更 */
 }
@@ -115,12 +96,6 @@ nav a:hover::after {
   transform: scaleX(1); /* マウスオーバー時にラインを表示する */
 }
 
-
-
-
-
-
-
 /* メインコンテンツスタイル */
 main {
   margin: 20px auto;
@@ -128,16 +103,16 @@ main {
   min-width: 500px;
 }
 
-h2{
+h2 {
   font-size: 4rem;
 }
 
-.contents{
+.contents {
   justify-content: center;
   align-items: center;
 }
 
-.contents section{
+.contents section {
   margin-top: 300px;
   margin-bottom: 300px;
 }
@@ -146,51 +121,52 @@ h2{
   text-align: left;
 }
 
-
-/* p要素のスタイル */
 .left-format p {
   text-align: left;
   line-height: 1.5rem;
 }
 
-.contents-type1{
+.contents-type1 {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   margin: 50px auto;
 }
 
-.contents-type1 img{
-  width: 50%;
-  height: auto;
-  margin-left: 5%;
+.contents-type1 iframe {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
 }
 
-
+.contents-type1 .twitter-widget {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+}
 
 .right-format h2 {
   text-align: right;
 }
 
-
-/* p要素のスタイル */
 .right-format p {
   text-align: left;
   line-height: 1.5rem;
 }
 
-.contents-type2{
+.contents-type2 {
   display: flex;
   align-items: center;
   margin: 50px auto;
 }
 
-.contents-type2 img{
+.contents-type2 img {
   width: 50%;
   height: auto;
   margin-right: 5%;
 }
 
-h3{
+h3 {
   font-size: 1.6rem;
   margin-bottom: 20px;
 }
@@ -212,47 +188,36 @@ th {
   background-color: #f2f2f2;
 }
 
-
-
-
-
-
-
-/*フェード おまけ*/
-.fade{
+/* フェード おまけ */
+.fade {
   margin-top: 80vh;
   text-align: center;
-  opacity : 0;
+  opacity: 0;
   transition: opacity 3s;
 }
 
-.fade.view{
+.fade.view {
   opacity: 1;
 }
 
-/*ボタン*/
+/* ボタン */
 a.button_A {
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	width: 200px;
-	margin: auto;
-	padding: 1rem 4rem;
-	font-weight: bold;
-	border: 2px solid #f15a24;
-	color: #f15a24;
-	border-radius: 100vh;
-	transition: 0.3s;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+  margin: auto;
+  padding: 1rem 4rem;
+  font-weight: bold;
+  border: 2px solid #f15a24;
+  color: #f15a24;
+  border-radius: 100vh;
+  transition: 0.3s;
 }
 a.button_A:hover {
-	color: #fff;
-	background: #f15a24;
+  color: #fff;
+  background: #f15a24;
 }
-
-
-
-
-
 
 /* フッタースタイル */
 footer {
@@ -279,10 +244,20 @@ footer ul li a {
   color: #333;
 }
 
-small{
+small {
   margin-top: 40px;
   color: #333;
   display: inline-block;
 }
 
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  main {
+    width: 90%;
+    min-width: auto;
+  }
 
+  .contents-type1 {
+    flex-direction: column;
+  }
+}
