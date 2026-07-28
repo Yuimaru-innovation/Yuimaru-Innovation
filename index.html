@@ -1,122 +1,412 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Stylish Website</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="合同会社ゆいまーるイノベーションは、システム・アプリケーション、IoT・センシング、ITインフラの開発と技術調査・研究開発支援を行う技術パートナーです。">
+  <meta name="theme-color" content="#ffffff">
+  <title>合同会社ゆいまーるイノベーション｜アイデアを、現場で使える技術へ。</title>
+  <link rel="stylesheet" href="styles.css?v=20260728-3">
+  <script src="index.js" defer></script>
 </head>
 <body>
-  <!--マスク処理-->
-  <div class="mask" id="mask"></div>
-  <div id="particles-js"></div>
-    <!--全体-->
-    <div id="wrap">
-      <header>
-        <img src="demo.png" alt="Header Image">
-        <!-- その他のヘッダーコンテンツ -->
-        
-        <div class="header-contents">
-          <a href="index.html"><img src="logo.png" alt="ロゴマーク" class="logo"></a>
-          <nav>
-            <ul class="menu">
-              <li><a href="#news">ニュース</a></li>
-              <li><a href="#about">何やってるの？</a></li>
-              <li><a href="#service">サービス</a></li>
-              <li><a href="#company">会社概要</a></li>
-              <li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdmQhj9-GMH6dLFwj0mIBZCeuZ_hiGfhXMhQkhA5QnNf7q0vA/viewform?usp=sharing">お問い合わせ</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+  <a class="skip-link" href="#main-content">本文へ移動する</a>
 
-      <main>
-        <div class="contents">
-          <!-- ニュース -->
-          <section id="news">
-            <h2>NEWS</h2>
-            <div class="contents-type1">
-              <iframe src="./news.html" frameborder="0" width="100%" height="400px"></iframe>
-            </div>      
-          </section>
-          
-          <!-- 企業について -->
-          <section id="about">
-            <h2>なにやってるの？</h2>
-            <div class="contents-type1">
-              <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-              </p>
-              <img src="demo.png" alt="社内の様子">
-            </div>           
-          </section>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="合同会社ゆいまーるイノベーション トップページ">
+        <img src="logo.png" alt="合同会社ゆいまーるイノベーション">
+      </a>
 
-          <!-- 製品紹介 -->
-          <section id="service">
-            <h2>サービス</h2>
-            <div class="contents-type2">
-              <img src="demo.png" alt="製品1">
-              <div class="contents-text">
-                <h3>タイトル</h3>
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                </p>
-              </div>
-            </div>
-            <div class="contents-type2">
-              <img src="demo.png" alt="製品1">
-              <div class="contents-text">
-                <h3>タイトル</h3>
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                </p>
-              </div>
-            </div>
-            <div class="contents-type2">
-              <img src="demo.png" alt="製品1">
-              <div class="contents-text">
-                <h3>タイトル</h3>
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                </p>
-              </div>
-            </div>
-          </section>
+      <button class="menu-button" type="button" aria-controls="global-nav" aria-expanded="false">
+        <span class="menu-button__label">MENU</span>
+        <span class="menu-button__lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
 
-          <!-- 会社概要 -->
-          <section id="company">
-            <h2>会社概要</h2>
-            <table>
-              <tr>
-                <td>所在地</td>
-                <td>〒573-0031　大阪府枚方市岡本町７番１号</td>
-              </tr>
-              <tr>
-                <td>メールアドレス</td>
-                <td>準備中</td>
-              </tr>
-              <tr>
-                <td>電話番号</td>
-                <td>準備中</td>
-              </tr>
-            </table>
-            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdmQhj9-GMH6dLFwj0mIBZCeuZ_hiGfhXMhQkhA5QnNf7q0vA/viewform?usp=sharing" class="button_A">お問い合わせはこちら</a>
-          </section>
-        </div>
-      </main>
-
-      <footer>
+      <nav class="global-nav" id="global-nav" aria-label="メインナビゲーション">
         <ul>
-          <li><a href="#news">ニュース</a></li>
-          <li><a href="#about">何やってるの？</a></li>
-          <li><a href="#service">サービス</a></li>
+          <li><a href="#about">会社紹介</a></li>
+          <li><a href="#services">事業内容</a></li>
+          <li><a href="#fields">対応領域</a></li>
           <li><a href="#company">会社概要</a></li>
-          <li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdmQhj9-GMH6dLFwj0mIBZCeuZ_hiGfhXMhQkhA5QnNf7q0vA/viewform?usp=sharing">お問い合わせ</a></li>
-          <li><a target="_blank" href="privacypolicy-app.html">プライバシーポリシー</a></li>
+          <li><a href="news.html">お知らせ</a></li>
         </ul>
-        <small>&copy;Yuima-ru Innovation 2023</small>
-      </footer>
+        <a class="header-contact" href="#contact">お問い合わせ</a>
+      </nav>
     </div>
-  </div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="index.js"></script>
+  </header>
 
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">TECHNOLOGY FOR THE REAL WORLD</p>
+          <h1 id="hero-title">アイデアを、<br><span>現場で使える技術へ。</span></h1>
+          <p class="hero-lead">
+            構想から設計、開発、導入まで。<br>
+            課題の本質を捉え、実際に使い続けられる仕組みをつくります。
+          </p>
+          <div class="hero-actions">
+            <a class="button button--primary" href="#contact">技術相談をする<span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#services">事業内容を見る<span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit orbit--outer"></div>
+          <div class="orbit orbit--inner"></div>
+          <div class="visual-core">
+            <span>IDEA</span>
+            <strong>×</strong>
+            <span>TECH</span>
+          </div>
+          <span class="visual-label visual-label--one">DESIGN</span>
+          <span class="visual-label visual-label--two">BUILD</span>
+          <span class="visual-label visual-label--three">IMPLEMENT</span>
+          <span class="visual-dot visual-dot--orange"></span>
+          <span class="visual-dot visual-dot--yellow"></span>
+          <span class="visual-dot visual-dot--green"></span>
+        </div>
+      </div>
+      <div class="hero-bottom">
+        <p>SCROLL</p>
+        <span aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section class="section section--about" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="section-heading reveal">
+          <p class="section-number">01</p>
+          <p class="section-en">ABOUT US</p>
+          <h2 id="about-title">技術をつくるだけでなく、<br>使われるところまで。</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p class="lead">
+            私たちは、企業・自治体・大学・研究機関の皆さまとともに、
+            現場の課題を技術で解決する開発会社です。
+          </p>
+          <p>
+            まだ輪郭の定まっていないアイデアも、専門的な研究テーマも、まずは丁寧に整理することから始めます。
+            目的や利用環境に合わせ、ソフトウェア、ハードウェア、インフラを横断して実現方法を設計。
+            検証で終わらない、運用を見据えた仕組みへつなげます。
+          </p>
+          <div class="about-principle">
+            <span>構想</span><i aria-hidden="true"></i>
+            <span>開発</span><i aria-hidden="true"></i>
+            <span>導入</span><i aria-hidden="true"></i>
+            <span>運用</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container technology-visuals" role="group" aria-label="技術開発のイメージ">
+        <figure class="technology-visual technology-visual--wide reveal">
+          <img src="assets/field-experience.webp?v=3" alt="体験展示で複数の端末を操作する様子" width="2804" height="1430" loading="lazy">
+          <figcaption>
+            <span>FIELD</span>
+            <strong>現場とつながる</strong>
+            <p>利用する方の反応を確かめながら、使いやすさと体験価値を磨きます。</p>
+          </figcaption>
+        </figure>
+        <figure class="technology-visual reveal">
+          <img src="assets/sensing-development.webp" alt="センシング機器を収めたケースを確認する様子" width="1400" height="600" loading="lazy">
+          <figcaption>
+            <span>SENSING</span>
+            <strong>データをとらえる</strong>
+            <p>センサー、通信、可視化まで、利用環境に合わせて設計します。</p>
+          </figcaption>
+        </figure>
+        <figure class="technology-visual technology-visual--design reveal">
+          <img src="assets/pcb-design-workspace.webp" alt="機密情報を含まない架空の基板設計用CAD画面" width="1400" height="788" loading="lazy">
+          <figcaption>
+            <span>PCB DESIGN</span>
+            <strong>設計を深める</strong>
+            <p>回路構成、部品配置、配線、製造条件を検討し、実装可能な設計へ落とし込みます。</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading section-heading--horizontal reveal">
+          <div>
+            <p class="section-number">02</p>
+            <p class="section-en">SERVICES</p>
+          </div>
+          <div>
+            <h2 id="services-title">事業内容</h2>
+            <p>課題に応じて、必要な技術を組み合わせてご提案します。</p>
+          </div>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <p class="service-index">01</p>
+            <div class="service-icon" aria-hidden="true">APP</div>
+            <h3>システム、<br>アプリケーション開発</h3>
+            <p>業務システムやWeb・モバイルアプリケーションを、要件整理から設計、開発、導入まで一貫して支援します。</p>
+            <ul>
+              <li>業務システム</li>
+              <li>Webアプリケーション</li>
+              <li>モバイルアプリケーション</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <p class="service-index">02</p>
+            <div class="service-icon service-icon--yellow" aria-hidden="true">IoT</div>
+            <h3>IoT、センシング<br>システム開発</h3>
+            <p>センサー選定やデータ収集、通信、可視化まで、現場環境に合わせたセンシングの仕組みを構築します。</p>
+            <ul>
+              <li>センサー・デバイス連携</li>
+              <li>遠隔監視・データ収集</li>
+              <li>可視化・分析基盤</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <p class="service-index">03</p>
+            <div class="service-icon service-icon--green" aria-hidden="true">INF</div>
+            <h3>サーバー、<br>ITインフラ構築</h3>
+            <p>システムを安定して動かすためのクラウド、サーバー、ネットワーク環境を設計・構築します。</p>
+            <ul>
+              <li>クラウド環境構築</li>
+              <li>サーバー設計・構築</li>
+              <li>ネットワーク・運用設計</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <p class="service-index">04</p>
+            <div class="service-icon service-icon--mix" aria-hidden="true">R&amp;D</div>
+            <h3>技術調査、<br>研究開発支援</h3>
+            <p>新規テーマの技術調査、実現性の検証、試作開発など、研究と社会実装の間を技術面から支援します。</p>
+            <ul>
+              <li>技術・市場動向調査</li>
+              <li>概念実証・試作</li>
+              <li>研究成果の実装支援</li>
+            </ul>
+          </article>
+        </div>
+
+        <section class="oss-capability reveal" aria-labelledby="oss-title">
+          <div class="oss-capability__intro">
+            <p class="section-en">OPEN SOURCE</p>
+            <h3 id="oss-title">OSS活用・導入支援</h3>
+            <p>
+              実績あるオープンソースソフトウェアを活用し、
+              組織の要件に合わせた構築、設定、運用設計、カスタマイズを支援します。
+            </p>
+          </div>
+          <div class="oss-capability__products">
+            <p class="oss-capability__label">取り扱い経験のあるOSS（一例）</p>
+            <ul>
+              <li><span>01</span>Jitsi Meet</li>
+              <li><span>02</span>Rocket.Chat</li>
+              <li><span>03</span>Mattermost</li>
+              <li><span>04</span>Pleasanter</li>
+              <li><span>05</span>MediaCMS</li>
+              <li><span>06</span>その他各種OSS</li>
+            </ul>
+            <p class="trademark-note">
+              記載の製品・サービス名は、各社または各プロジェクトの商標・登録商標です。
+              各権利者との提携・推奨関係を示すものではありません。
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section section--fields" id="fields" aria-labelledby="fields-title">
+      <div class="container fields-grid">
+        <div class="section-heading reveal">
+          <p class="section-number">03</p>
+          <p class="section-en">FIELDS</p>
+          <h2 id="fields-title">対応領域</h2>
+          <p>組織や分野を問わず、技術を必要とする現場に伴走します。</p>
+        </div>
+
+        <div class="field-list">
+          <article class="field-item reveal">
+            <p class="field-index">01</p>
+            <div>
+              <h3>企業</h3>
+              <p>業務効率化、新規サービス開発、データ活用など、事業課題に合わせた技術導入を支援します。</p>
+            </div>
+            <span aria-hidden="true">BUSINESS</span>
+          </article>
+          <article class="field-item reveal">
+            <p class="field-index">02</p>
+            <div>
+              <h3>自治体・公共分野</h3>
+              <p>地域や行政現場の課題を整理し、利用者と運用担当者の双方に配慮した仕組みを検討します。</p>
+            </div>
+            <span aria-hidden="true">PUBLIC</span>
+          </article>
+          <article class="field-item reveal">
+            <p class="field-index">03</p>
+            <div>
+              <h3>大学・研究機関</h3>
+              <p>研究テーマに応じた装置・ソフトウェアの試作、データ取得環境の整備、実装を支援します。</p>
+            </div>
+            <span aria-hidden="true">ACADEMIC</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--strengths" id="strengths" aria-labelledby="strengths-title">
+      <div class="container">
+        <div class="section-heading section-heading--center reveal">
+          <p class="section-number">04</p>
+          <p class="section-en">OUR STRENGTHS</p>
+          <h2 id="strengths-title">当社の特徴</h2>
+        </div>
+
+        <div class="strength-grid">
+          <article class="strength-card reveal">
+            <p class="strength-number">01</p>
+            <h3>課題整理から<br>一緒に考える</h3>
+            <p>「何をつくるか」が決まる前からご相談いただけます。目的、利用者、制約条件を整理し、実現すべき価値を明確にします。</p>
+          </article>
+          <article class="strength-card reveal">
+            <p class="strength-number strength-number--yellow">02</p>
+            <h3>領域を横断した<br>技術設計</h3>
+            <p>ソフトウェア、デバイス、通信、インフラを分断せず、システム全体を見渡して無理のない構成を設計します。</p>
+          </article>
+          <article class="strength-card reveal">
+            <p class="strength-number strength-number--green">03</p>
+            <h3>導入後を見据えた<br>伴走支援</h3>
+            <p>現場での使いやすさ、保守性、将来の拡張性を大切にし、導入後も運用や改善を継続的に支援します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--process" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-heading section-heading--horizontal reveal">
+          <div>
+            <p class="section-number">05</p>
+            <p class="section-en">PROCESS</p>
+          </div>
+          <div>
+            <h2 id="process-title">ご相談から導入までの流れ</h2>
+            <p>状況に合わせて進め方を調整し、各段階で認識を共有します。</p>
+          </div>
+        </div>
+
+        <ol class="process-list">
+          <li class="reveal">
+            <p class="process-number">STEP 01</p>
+            <h3>お問い合わせ</h3>
+            <p>検討段階のアイデアや技術的な課題でも、まずはお気軽にお聞かせください。</p>
+          </li>
+          <li class="reveal">
+            <p class="process-number">STEP 02</p>
+            <h3>ヒアリング</h3>
+            <p>背景、目的、利用環境、スケジュールなどを伺い、課題を整理します。</p>
+          </li>
+          <li class="reveal">
+            <p class="process-number">STEP 03</p>
+            <h3>ご提案・お見積り</h3>
+            <p>実現方法、開発範囲、進行計画、費用をご提案します。</p>
+          </li>
+          <li class="reveal">
+            <p class="process-number">STEP 04</p>
+            <h3>設計・開発・検証</h3>
+            <p>進捗と検証結果を共有しながら、設計・実装を進めます。</p>
+          </li>
+          <li class="reveal">
+            <p class="process-number">STEP 05</p>
+            <h3>導入・運用支援</h3>
+            <p>現場への導入を支援し、必要に応じて運用・改善にも伴走します。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--company" id="company" aria-labelledby="company-title">
+      <div class="container company-grid">
+        <div class="section-heading reveal">
+          <p class="section-number">06</p>
+          <p class="section-en">COMPANY</p>
+          <h2 id="company-title">会社概要</h2>
+        </div>
+        <dl class="company-data reveal">
+          <div>
+            <dt>会社名</dt>
+            <dd>合同会社ゆいまーるイノベーション</dd>
+          </div>
+          <div>
+            <dt>代表社員</dt>
+            <dd>豊味 諒磨</dd>
+          </div>
+          <div>
+            <dt>所在地</dt>
+            <dd>〒573-0031<br>大阪府枚方市岡本町7番1号</dd>
+          </div>
+          <div>
+            <dt>事業内容</dt>
+            <dd>
+              システム・アプリケーション開発<br>
+              IoT・センシングシステム開発<br>
+              サーバー・ITインフラ構築<br>
+              技術調査・研究開発支援
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-decoration" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="container contact-inner reveal">
+        <p class="section-en">CONTACT</p>
+        <h2 id="contact-title">技術に関するお悩みを、<br>まずはお聞かせください。</h2>
+        <p>
+          具体的な仕様が決まっていない段階でも構いません。<br>
+          課題やアイデアを整理し、次の一歩をご一緒に考えます。
+        </p>
+        <a class="button button--light" href="https://docs.google.com/forms/d/e/1FAIpQLSdmQhj9-GMH6dLFwj0mIBZCeuZ_hiGfhXMhQkhA5QnNf7q0vA/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">
+          お問い合わせフォームへ<span aria-hidden="true">↗</span>
+        </a>
+        <p class="contact-note">外部のGoogleフォームが開きます</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a href="#top"><img src="logo.png" alt="合同会社ゆいまーるイノベーション"></a>
+        <p>アイデアを、現場で使える技術へ。</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#about">会社紹介</a></li>
+          <li><a href="#services">事業内容</a></li>
+          <li><a href="#fields">対応領域</a></li>
+          <li><a href="#strengths">当社の特徴</a></li>
+        </ul>
+        <ul>
+          <li><a href="#process">導入までの流れ</a></li>
+          <li><a href="#company">会社概要</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><a href="privacypolicy.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>&copy; <span id="current-year">2026</span> Yuima-ru Innovation LLC.</small>
+      <a class="page-top" href="#top">PAGE TOP <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
 </html>
