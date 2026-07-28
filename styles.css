@@ -624,6 +624,10 @@ ol {
   object-position: 48% center;
 }
 
+.technology-visual--design img {
+  object-position: center 42%;
+}
+
 .technology-visual::after {
   position: absolute;
   content: "";
