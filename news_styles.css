@@ -80,6 +80,9 @@ a {
 .brand {
   display: block;
   width: min(290px, 55vw);
+  padding: 8px 12px;
+  background: var(--ink);
+  border-radius: 2px;
 }
 
 .back-link {
@@ -274,7 +277,15 @@ a {
 }
 
 .sub-footer img {
-  width: min(290px, 48vw);
+  width: 100%;
+}
+
+.sub-footer .container > a {
+  display: block;
+  width: min(314px, 52vw);
+  padding: 9px 12px;
+  background: var(--ink);
+  border-radius: 2px;
 }
 
 .sub-footer div > div {
@@ -353,7 +364,11 @@ a {
   }
 
   .sub-footer img {
-    width: min(260px, 75vw);
+    width: 100%;
+  }
+
+  .sub-footer .container > a {
+    width: min(284px, 78vw);
   }
 
   .sub-footer div > div {
