@@ -241,9 +241,9 @@ ol {
   min-height: 650px;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(400px, 0.96fr);
+  grid-template-columns: minmax(0, 1.18fr) minmax(380px, 0.82fr);
   align-items: center;
-  gap: 44px;
+  gap: 32px;
 }
 
 .eyebrow,
@@ -268,7 +268,7 @@ ol {
 
 .hero h1 {
   margin-bottom: 32px;
-  font-size: clamp(2.75rem, 5.2vw, 5.15rem);
+  font-size: clamp(2.75rem, 4.4vw, 4rem);
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1.28;
@@ -277,6 +277,8 @@ ol {
 .hero h1 span {
   position: relative;
   z-index: 0;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .hero h1 span::after {
@@ -348,7 +350,7 @@ ol {
 
 .hero-visual {
   position: relative;
-  width: min(41vw, 500px);
+  width: min(38vw, 470px);
   aspect-ratio: 1;
   justify-self: end;
 }
@@ -622,6 +624,11 @@ ol {
 
 .technology-visual--wide img {
   object-position: 48% center;
+  opacity: 1;
+}
+
+.technology-visual--wide:hover img {
+  opacity: 1;
 }
 
 .technology-visual--design img {
@@ -772,15 +779,16 @@ ol {
 .oss-capability {
   display: grid;
   grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
-  gap: clamp(48px, 8vw, 110px);
-  margin-top: 70px;
-  padding: 62px;
-  color: #fff;
-  background: var(--ink);
+  gap: clamp(40px, 6vw, 78px);
+  margin-top: 32px;
+  padding: 48px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
 }
 
 .oss-capability .section-en {
-  color: #a9bcb1;
+  color: var(--green-dark);
 }
 
 .oss-capability h3 {
@@ -790,13 +798,13 @@ ol {
 
 .oss-capability__intro > p:last-child {
   margin: 0;
-  color: #b9c5bf;
+  color: var(--ink-soft);
   font-size: 0.92rem;
 }
 
 .oss-capability__label {
   margin-bottom: 18px;
-  color: #9eafa6;
+  color: var(--ink-soft);
   font-size: 0.73rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -807,13 +815,13 @@ ol {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 0;
   padding: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 1px solid var(--line);
   list-style: none;
 }
 
 .oss-capability__products li {
   padding: 17px 12px 17px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid var(--line);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.94rem;
   font-weight: 700;
@@ -821,7 +829,7 @@ ol {
 }
 
 .oss-capability__products li:nth-child(odd) {
-  border-right: 1px solid rgba(255, 255, 255, 0.14);
+  border-right: 1px solid var(--line);
 }
 
 .oss-capability__products li:nth-child(even) {
@@ -837,7 +845,7 @@ ol {
 
 .trademark-note {
   margin: 18px 0 0;
-  color: #84958c;
+  color: #77827c;
   font-size: 0.65rem;
   line-height: 1.7;
 }
@@ -1579,7 +1587,7 @@ ol {
   }
 
   .hero h1 {
-    font-size: 2.34rem;
+    font-size: clamp(1.75rem, 8.7vw, 2.05rem);
   }
 
   .about-principle {
