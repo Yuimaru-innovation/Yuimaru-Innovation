@@ -590,6 +590,88 @@ ol {
   background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green));
 }
 
+.technology-visuals {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 24px;
+  margin-top: 88px;
+}
+
+.technology-visual {
+  position: relative;
+  min-height: 310px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.technology-visual--wide {
+  grid-column: 1 / -1;
+  min-height: 480px;
+}
+
+.technology-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.35s ease, transform 0.55s ease;
+}
+
+.technology-visual--wide img {
+  object-position: 48% center;
+}
+
+.technology-visual::after {
+  position: absolute;
+  content: "";
+  inset: 34% 0 0;
+  background: linear-gradient(transparent, rgba(10, 17, 14, 0.92));
+  pointer-events: none;
+}
+
+.technology-visual:hover img {
+  opacity: 0.9;
+  transform: scale(1.025);
+}
+
+.technology-visual figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 38px 40px 32px;
+  color: #fff;
+}
+
+.technology-visual figcaption span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--yellow);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.technology-visual figcaption strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+}
+
+.technology-visual figcaption p {
+  max-width: 34em;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
 .section--services {
   background: var(--mist);
 }
@@ -681,6 +763,79 @@ ol {
   color: var(--ink-soft);
   font-size: 0.77rem;
   font-weight: 700;
+}
+
+.oss-capability {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(48px, 8vw, 110px);
+  margin-top: 70px;
+  padding: 62px;
+  color: #fff;
+  background: var(--ink);
+}
+
+.oss-capability .section-en {
+  color: #a9bcb1;
+}
+
+.oss-capability h3 {
+  margin-bottom: 20px;
+  font-size: clamp(1.65rem, 2.8vw, 2.35rem);
+}
+
+.oss-capability__intro > p:last-child {
+  margin: 0;
+  color: #b9c5bf;
+  font-size: 0.92rem;
+}
+
+.oss-capability__label {
+  margin-bottom: 18px;
+  color: #9eafa6;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.oss-capability__products ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  list-style: none;
+}
+
+.oss-capability__products li {
+  padding: 17px 12px 17px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.94rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.oss-capability__products li:nth-child(odd) {
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.oss-capability__products li:nth-child(even) {
+  padding-left: 18px;
+}
+
+.oss-capability__products li span {
+  display: inline-block;
+  min-width: 30px;
+  color: var(--orange);
+  font-size: 0.62rem;
+}
+
+.trademark-note {
+  margin: 18px 0 0;
+  color: #84958c;
+  font-size: 0.65rem;
+  line-height: 1.7;
 }
 
 .fields-grid {
@@ -1234,6 +1389,20 @@ ol {
     padding-top: 0;
   }
 
+  .technology-visuals {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .technology-visual--wide {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    min-height: 470px;
+  }
+
+  .oss-capability {
+    grid-template-columns: 1fr;
+  }
+
   .strength-card {
     padding-inline: 28px;
   }
@@ -1299,8 +1468,29 @@ ol {
     grid-template-columns: 1fr;
   }
 
+  .technology-visuals {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 60px;
+  }
+
+  .technology-visual,
+  .technology-visual--wide {
+    grid-column: auto;
+    min-height: 360px;
+  }
+
+  .technology-visual figcaption {
+    padding: 28px 24px 24px;
+  }
+
   .service-card {
     min-height: 0;
+    padding: 38px 28px;
+  }
+
+  .oss-capability {
+    margin-top: 46px;
     padding: 38px 28px;
   }
 
@@ -1394,6 +1584,23 @@ ol {
 
   .about-principle i {
     margin-inline: 7px;
+  }
+
+  .technology-visual,
+  .technology-visual--wide {
+    min-height: 320px;
+  }
+
+  .oss-capability__products ul {
+    grid-template-columns: 1fr;
+  }
+
+  .oss-capability__products li:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .oss-capability__products li:nth-child(even) {
+    padding-left: 0;
   }
 
   .footer-links {
